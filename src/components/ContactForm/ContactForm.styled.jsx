@@ -6,7 +6,7 @@ export const ContactFormStyled = styled.form`
   justify-content: space-between;
   width: 80%;
   min-width: 80px;
-  margin-top: 20px;
+  margin-right: 20px;
   margin-bottom: 20px;
   border: 1px solid #32a1ce;
   border-radius: 5px;

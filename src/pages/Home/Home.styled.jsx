@@ -58,7 +58,6 @@ export const TextWrapperStyled = styled.div`
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     & > p:not(:last-child) {
-      margin-bottom: 0;
       margin-right: 96px;
     }
   }
