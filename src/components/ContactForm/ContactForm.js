@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import { getContacts } from 'redux/contacts/contactsSlice';
-import { addContact } from 'redux/contacts/contactsOperations';
+import { getContacts } from 'redux/contacts/contacts-slice';
+import { addContact } from 'redux/contacts/contacts-operations';
 import { Button } from 'components/Button/Button';
 import {
   ContactFormStyled,

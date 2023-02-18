@@ -4,7 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import { notifyError } from 'components/Notify/NotifyError';
 import { Loader } from 'components/Loader/Loader';
 
-import { getLoadingStatus, getError } from 'redux/contacts/contactsSlice';
+import { getLoadingStatus, getError } from 'redux/contacts/contacts-slice';
 import { MainStyled } from './Main.styled';
 import { FormWrapperStyled } from 'components/FormWrapper/FormWrapper.styled';
 import ContactForm from 'components/ContactForm/ContactForm';
