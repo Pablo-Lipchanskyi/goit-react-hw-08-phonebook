@@ -13,7 +13,7 @@ import {
   FormWrapperStyled,
   FilterWrapperStyled,
 } from './ContactsPage.styled';
-import ContactForm from 'components/ContactForm.jsx/ContactForm';
+import ContactForm from 'components/ContactForm/ContactForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';

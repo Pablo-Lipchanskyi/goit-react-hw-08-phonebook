@@ -11,7 +11,7 @@ import Layout from 'components/Layout/Layout';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
-const LogInPage = lazy(() => import('pages/LogInPage/LogInPage'));
+const LogInPage = lazy(() => import('pages/LoginPage/LoginPage'));
 const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 

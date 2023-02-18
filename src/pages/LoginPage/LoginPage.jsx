@@ -10,7 +10,7 @@ import {
   LabelStyled,
   InputStyled,
   LinkStyled,
-} from './LogInPage.styled';
+} from './LoginPage.styled';
 import { Button } from 'components/Button/Button';
 
 export default function LogInPage() {

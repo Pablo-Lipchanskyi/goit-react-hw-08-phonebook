@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import { getContacts } from 'redux/contacts/contacts-slice';
+import { selectContacts } from 'redux/contacts/contacts-selectors';
 import { addContact } from 'redux/contacts/contacts-operations';
 import { Button } from 'components/Button/Button';
 import {
@@ -11,9 +10,9 @@ import {
 
 export default function ContactForm() {
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [number, setPhone] = useState('');
 
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const handleInputChange = event => {
@@ -25,7 +24,7 @@ export default function ContactForm() {
         break;
 
       case 'number':
-        setNumber(value);
+        setPhone(value);
         break;
 
       default:
@@ -35,8 +34,9 @@ export default function ContactForm() {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const newContact = { id: nanoid(5), name, number };
-    if (contacts.some(contact => contact.name === name)) {
+    const newContact = { name, number };
+
+    if (contacts?.some(contact => contact.name === name)) {
       return alert(`${name} is already in contacts.`);
     } else {
       dispatch(addContact(newContact));
@@ -46,7 +46,7 @@ export default function ContactForm() {
 
   const resetForm = () => {
     setName('');
-    setNumber('');
+    setPhone('');
   };
 
   return (
@@ -61,6 +61,7 @@ export default function ContactForm() {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
+          autoFocus
         />
       </LabelInputStyled>
 
@@ -76,7 +77,7 @@ export default function ContactForm() {
           required
         />
       </LabelInputStyled>
-      <Button>Add contact</Button>
+      <Button>Add</Button>
     </ContactFormStyled>
   );
 }
